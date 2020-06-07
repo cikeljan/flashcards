@@ -1,0 +1,180 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+body{
+    background-color: #839493;
+    margin: 0;
+    
+}
+
+.card {
+    position:relative;
+    width:400px;
+    height: 400px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    }
+
+
+header svg,h1 {  
+  display: inline-block;
+  height: 40px; 
+  stroke: black; 
+  fill: black;
+  margin:10px 60px 10px 10px;
+  vertical-align: middle;
+  font-size: 40px;
+  float:left;
+}
+
+header h1{
+  width:300px;
+}
+
+header {
+  background-color:#4d7ebf;
+  overflow: hidden;
+}
+
+section, h2{
+   text-align: center;
+}
+
+.alert{
+  color:#a90b21de;
+  font-size:17x;
+}
+
+
+.inactive {
+  display: none;
+}
+
+.btn {
+  background-color: #2794da;
+  color: white;
+  border-radius: 10px;
+  border: 0;
+  font-size: 20px;
+}
+
+
+
+#done{
+  display:block;
+  margin:auto;
+  margin-top:40px;
+  font-size: 30px;
+  background-color:  #077d5d;;
+  border-radius: 15px;
+}
+
+main{
+  margin: auto;
+  width:600px;
+ 
+}
+
+
+#deck input{
+  margin-bottom:10px;
+}
+
+#deck input:focus {
+  background-color: #cec418;
+}
+
+#main .status {
+  background-color: #2794da;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  color: black;
+  margin: 10px auto;
+  font-size:20px;
+  padding: 0.5em;
+  width: 275px;
+
+}
+
+.button-list{
+  width: 100%;
+  height: 30px;
+  background-color: #4d7ebf;
+  border: 2px solid #00000075;
+  margin-top:1px;
+}
+
+#menu .button-list:nth-child(2n){
+  background-color: #2794da;
+}
+
+#menu .button-list:hover, .button-list:hover{
+  background-color: #1f3a5f;
+}
+
+.return{
+  -webkit-animation: return-back 0.5s forwards;
+          animation: return-back 0.5s forwards;
+}
+
+@-webkit-keyframes return-back {
+  100% {
+   -webkit-transform: none;
+           transform: none;
+  }body{
+    background-color: #839493;
+  }
+}
+
+@keyframes return-back {
+  100% {
+   -webkit-transform: none;
+           transform: none;
+  }body{
+    background-color: #839493;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  
+  main{
+    width:100%;
+  }
+
+  header h1{
+    width:100%;
+  }
+
+
+  .card {
+   
+    width:66%;
+    
+    }
+
+  #main .status{
+    width: 48%;
+
+  }
+
+
+}
+
+
+
+
+

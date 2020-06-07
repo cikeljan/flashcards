@@ -1,0 +1,79 @@
+<!DOCTYPE HTML> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8"/>
+	<title>Flashcards</title> 
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="xlsx.full.min.js"></script>
+	
+</head> 
+
+
+<body> 
+	<header>
+		<h1>FLASHCARDS</h1>
+
+		<svg class="svg-home" viewBox="0 0 1024 1024" >
+		  <path class="path1" d="M512 96l-512 512 96 96 96-96v416h256v-192h128v192h256v-416l96 96 96-96-512-512zM512 512c-35.346 0-64-28.654-64-64s28.654-64 64-64c35.346 0 64 28.654 64 64s-28.654 64-64 64z" onclick="home()"></path>
+		</svg>
+
+		<svg class="svg-circleplus" viewBox="0 0 1024 1024" onclick="setAddPage()">
+		  <circle cx="521" cy="521" r="469" fill="none" stroke-width="78"></circle>
+		  <line x1="339" y1="521" x2="703" y2="521" stroke-width="52"></line>
+		  <line x1="521" y1="339" x2="521" y2="704" stroke-width="52"></line>
+		</svg>  
+
+	</header>
+
+
+	<main>
+
+		<section id="menu" class= "active" >
+			<h2>Choose a deck or create a new one</h2>
+			<input id="newDeck" type="text" placeholder="Enter name of a new deck...">
+			<button id="addNewDeck" class=btn onclick="createSet()"> + Create set</button> 
+			<p class="alert inactive" id="sameName" >There is already a deck with this name</p>	
+		</section>
+
+
+		<section id="deck" class="inactive" >
+			<h2>Add some cards to your deck</h2>
+			<form>
+  				<input id="newItem" type="text" placeholder="Add your own term or concept...">
+  				<input id="newDef" type="text"  placeholder="...give it a definition, then click the button to...">
+			</form>
+			<button class=btn onclick="add()">Add</button>
+			<p>Or upload list of cards via excel file</p>				
+			<form >
+  				<label for="fileUpload">Select files:</label>
+  				<input type="file" id="fileUpload" multiple/><br><br>
+			</form>
+			<button class=btn onclick="Upload()">Submit</button>
+			<button class=btn id="done" onclick="done()" >Finish adding</button>
+			<p class="alert inactive" id="noCard" >You need to add at least one card to the deck</p>
+		</section>
+		
+
+
+		<section id="main" class="inactive">
+			<article class="status">
+				<div><span class="correct">0</span> right</div>
+				<div><span class="incorrect">0</span> wrong</div>
+			</article>
+		</section>
+
+
+		<section id ="result" class=" inactive">	
+			<h2>Your score is: <span class="correct">0</span> right and <span class="incorrect">0</span> wrong</h2>
+			<button class="button-list btn" onclick="again()">Practice again</button>
+			<button class="button-list btn" onclick="home()">Choose a different deck</button>
+		</section>
+		
+
+
+	</main>
+	<script src="main.js"></script>
+	<script>navigator.serviceWorker.register("sw.js");</script>
+</body> 
+
+</html>
